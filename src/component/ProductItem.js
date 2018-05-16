@@ -2,12 +2,11 @@ import React from "react";
 import { connect } from "react-redux";
 import { addingProduct } from "../actions";
 
-
-const ArtistListItem = ({ name, price, addingProduct }) => (
-    <div>
-      <p>{name}</p><span>{price}</span>
-      <button onClick={addingProduct}>+</button>
-    </div>
+const ProductItem = ({ name, price, addingProduct }) => (
+  <div>
+    <p>{name}</p><span>{price}</span>
+    <button onClick={addingProduct}>+</button>
+  </div>
 )
 
 const mapStateToProps = state => ({
@@ -18,4 +17,4 @@ const mapDispatchToProps = dispatch => ({
   addingProduct: () => dispatch(addingProduct())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ArtistListItem);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductItem);
