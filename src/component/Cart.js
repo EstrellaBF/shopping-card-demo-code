@@ -1,7 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
-
-import { addingProduct } from "./actions";
+import { connect } from 'react-redux';
+import { addingProduct } from "../actions";
 
 const Cart = ({ numero }) => {
   console.log(numero)
@@ -23,3 +22,5 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
+
+
